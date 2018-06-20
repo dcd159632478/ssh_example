@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="demo" namespace="/" extends="struts-default">
+		<!-- class属性中不写action的路径，因为在spring已经配置过了，应该写spring中bean的id -->
+		<action name="userAction" class="userAction" method="login">
+			<result name="success" type="redirect">/adminManage/admin_index.jsp</result>
+			<result name="input" type="redirect">/login.jsp</result>
+		</action>
+		
+		<action name="userAction1" class="userAction1" method="loginOut">
+			<result name="success" type="redirect">/login.jsp</result>
+		</action>
+		
+		<action name="userAction2" class="userAction2" method="getUserList">
+			<result name="success" type="redirect">/adminManage/userManage/userList.jsp</result>
+		</action>
+		
+		<action name="userAction3" class="userAction3" method="getUser">
+			<result name="success" type="redirect">/adminManage/userManage/updateUser.jsp</result>
+		</action>
+		
+		<action name="userAction4" class="userAction4" method="deleteUser">
+			<result name="success" type="redirect">/adminManage/userManage/userList.jsp</result>
+		</action>
+		
+		<action name="userAction5" class="userAction5" method="getUser">
+			<result name="success" type="redirect">/adminManage/userManage/lookUser.jsp</result>
+		</action>
+		
+		<action name="userAction6" class="userAction6" method="updateUser">
+			<result name="success" type="redirect">/adminManage/userManage/userList.jsp</result>
+		</action>
+		
+	</package>
+</struts>

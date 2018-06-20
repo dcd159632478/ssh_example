@@ -1,0 +1,9 @@
+.top_frame{
+	height:40px;
+	width:100%;
+	background-color:#f2f2f2;
+	color:#666;
+	font-size:14px;
+	line-height:40px;
+	display:block;
+}
